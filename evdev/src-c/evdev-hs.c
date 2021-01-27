@@ -3,7 +3,5 @@
 #include <unistd.h>
 
 void libevdev_hs_close(struct libevdev *dev) {
-    int fd = libevdev_get_fd(dev);
     libevdev_free(dev);
-    close(fd);
 }
